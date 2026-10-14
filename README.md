@@ -1,6 +1,6 @@
 # Turner Balloons KML Planner
 
-A **free personal project** developed by Turner Balloons Limited and shared with other balloon pilots. **There is no charge, and no plan to sell it.** Feedback and improvement suggestions are welcome.
+A **free personal project** developed by Alan Turner, Turner Balloons Limited and shared with other balloon pilots. **There is no charge, and no plan to sell it.** Feedback and improvement suggestions are welcome.
 
 **[Open the KML Planner](https://alanturner2026.github.io/Turner-balloons-kml/)**
 
@@ -29,3 +29,13 @@ Current input/output supports **KML**, not KMZ. It uses static HTML/CSS/JavaScri
 ## Feedback
 
 Suggestions, bug reports and experience from pilots using different devices or mapping apps are welcome. Please avoid publicly sharing sensitive BBAC details or personal contact information when reporting issues.
+
+## Local development and smoke check
+
+The site has no application dependencies or build step. Serve the repository root with any static HTTP server; for example, run `python3 -m http.server 8000 --bind 127.0.0.1` from this directory. Python is only a convenient development server, not an application requirement.
+
+With Node.js, Playwright and Chromium available, run `node tests/browser-smoke.cjs` in a second terminal. The cloud environment supplies these tools. The check uses `/usr/bin/chromium` and defaults to port 8000; set `PLANNER_TEST_URL` to test another local server. It checks help, small-screen layout, synthetic KML filtering/download, presets, and mocked postcode success/failure. It uses no BBAC data or real postcode. A mocked lookup does not verify access to the real service.
+
+Real authorised BBAC-file validation, iPad Safari file/download behaviour, navigation-app imports and deployment verification remain separate checks.
+
+The header uses the original supplied Jester photo, `Jester - Cornbury - cropped.jpeg` (about 15 KB). To replace it, update the header image source, its dimensions and descriptive alt text. The responsive CSS controls the displayed size without cropping the original photograph.

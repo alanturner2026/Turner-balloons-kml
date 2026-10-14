@@ -1,6 +1,6 @@
 # Turner Balloons KML Planner — Pilot User Guide
 
-**Developed by Turner Balloons Limited**  
+**Alan Turner, Turner Balloons Limited**
 **Test version — October 2026**
 
 **Open the planner:** https://alanturner2026.github.io/Turner-balloons-kml/
@@ -49,6 +49,8 @@ Download the new, full national KML from the authorised source. Open the planner
 - **KML only** at present; not GPX, airspace layers or automatic updates.
 
 ## If something does not work
+
+If the website appears out of date, reload it in Safari. If old wording remains, open the same website in a new Private tab to check with a fresh session. Avoid clearing browser data as a first step: it can remove your saved areas. An old display alone does not confirm whether the cause is browser caching or deployment.
 
 - **Nothing happens when choosing a file:** Make sure it is a real `.kml` file, and try opening the website directly in Safari instead of inside an app preview.
 - **Postcode lookup fails:** Check the postcode, internet connection and try again. The Advanced coordinates fields offer an alternative if you already know the coordinates.
