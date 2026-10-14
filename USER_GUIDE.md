@@ -25,11 +25,12 @@ The BBAC/source publisher controls availability, permissions and updates. This p
 4. Choose either:
    - **Circle**: drag the radius slider from **10 to 150 miles**, in **5-mile increments**. The number should update as you move it.
    - **Directional rectangle**: choose separate distances **North, East, South and West** of the postcode, in miles. For example, North 20 / East 50 / South 10 / West 10 gives an asymmetric selection.
-5. **Optional:** Enter a name under **Saved areas** and press **Save area**. Later, choose that area and press **Load**. This saves the area settings **only in your browser**, not the national KML. You do not need to save an area to generate a KML.
-6. Under **3. Generate filtered KML**, leave the filename blank for an automatic name or type a name of your own.
-7. Tap **Generate KML**. Wait for the retained-placemark count.
-8. Tap **Download filtered KML**. Save it where you can find it, then import it through your own mapping or balloon-navigation application's KML import procedure.
-9. **Check the result** against your original data and up-to-date official restrictions, including area boundaries, marker locations, minimum heights, no-landing conditions and any contact information. Do not assume that a successful download means the output has been validated for flight.
+5. **Optional map preview:** Tap **Preview area on map** to see your chosen boundary and the sensitive areas retained from your file. Blue is the chosen boundary; red shows retained sensitive-area features; the dark dot marks your centre. Drag to move, use +/− to zoom, and tap a feature to see its name. **Show entire chosen area** returns to your selection. You can preview a boundary before selecting a KML, then preview again after loading it.
+6. **Optional:** Enter a name under **Saved areas** and press **Save area**. Later, choose that area and press **Load**. This saves the area settings **only in your browser**, not the national KML. You do not need to save an area to generate a KML.
+7. Under **3. Generate filtered KML**, leave the filename blank for an automatic name or type a name of your own.
+8. Tap **Generate KML**. Wait for the retained-placemark count.
+9. Tap **Download filtered KML**. Save it where you can find it, then import it through your own mapping or balloon-navigation application's KML import procedure.
+10. **Check the result** against your original data and up-to-date official restrictions, including area boundaries, marker locations, minimum heights, no-landing conditions and any contact information. Do not assume that a successful download means the output has been validated for flight.
 
 ### Example without using anyone's personal location
 
@@ -42,6 +43,9 @@ Download the new, full national KML from the authorised source. Open the planner
 ## Privacy and limitations
 
 - The source KML is processed in your browser and is **not uploaded to a Turner Balloons server**.
+- Previewing requests background map tiles from **OpenStreetMap**, revealing the region you view. The KML remains in your browser and is not sent to the map provider. No map tiles are requested until you press **Preview area on map**.
+- The map is not an aviation chart. It uses simplified colours and displays standard KML points, lines and polygons (including holes and multi-geometries). Unsupported geometry stays in the exported KML and is reported in the preview count. The preview does not replace checking original styles, heights, restrictions and contact details in your navigation app.
+- Changing the source, location or distances clears the preview and previous download link. Preview or generate again to use the current settings. A background-map failure does not prevent KML generation.
 - Postcode lookup uses **postcodes.io**, a third-party lookup service. The postcode you type is sent to that service to obtain coordinates.
 - A saved area, if you choose to save one, may contain its postcode and is stored **on your device in that browser**. Do not save it if you want no locally stored preset.
 - The app preserves the chosen placemark XML and document styling in the generated file, but the filtering and pairing logic is **experimental**. This is not a certified geospatial or flight-safety tool.
@@ -53,6 +57,7 @@ Download the new, full national KML from the authorised source. Open the planner
 If the website appears out of date, reload it in Safari. If old wording remains, open the same website in a new Private tab to check with a fresh session. Avoid clearing browser data as a first step: it can remove your saved areas. An old display alone does not confirm whether the cause is browser caching or deployment.
 
 - **Nothing happens when choosing a file:** Make sure it is a real `.kml` file, and try opening the website directly in Safari instead of inside an app preview.
+- **Background map does not appear:** Check your internet connection. If OpenStreetMap tiles are unavailable, the selection and sensitive-area overlays can still be shown. KML generation and download do not depend on the background map.
 - **Postcode lookup fails:** Check the postcode, internet connection and try again. The Advanced coordinates fields offer an alternative if you already know the coordinates.
 - **No relevant placemarks:** Check the postcode, radius and whether your original KML actually covers that area.
 - **Download doesn't appear on iPad:** Look in Safari's Downloads list or **Files → Downloads**.
