@@ -1,33 +1,31 @@
 # Turner Balloons KML Planner
 
-A browser-based KML filtering tool, developed by Turner Balloons Limited.
+A **free personal project** developed by Turner Balloons Limited and shared with other balloon pilots. **There is no charge, and no plan to sell it.** Feedback and improvement suggestions are welcome.
 
-## How to use
+**[Open the KML Planner](https://alanturner2026.github.io/Turner-balloons-kml/)**
 
-1. Open the hosted website in Safari or another modern browser.
-2. Choose your **authorised** original sensitive-area .kml file.
-3. Type your own UK postcode (the field starts blank), or expand Advanced to enter coordinates.
-4. Choose a circular radius (10–150 miles, in five-mile increments) or directional north/east/south/west distances.
-5. Select **Generate KML**, then **Download filtered KML**.
-6. Check the output before importing it into a navigation app.
+**[Read the Pilot User Guide](USER_GUIDE.md)**
 
-Users can optionally save area presets in their own browser. Saved data stays on that device; it is not published to GitHub.
+## What it does
+
+Using your own authorised, up-to-date full-country BBAC sensitive-area KML file, enter a UK postcode and choose a circle (10–150 miles, in five-mile increments) or a directional rectangle (independent north, east, south and west distances). The browser prepares a smaller KML you can download and check in your navigation app.
+
+You can optionally save area settings locally in your browser, then reuse them to regenerate a filtered file when the original BBAC file is updated. The planner does not automatically obtain or update the BBAC database.
 
 ## Privacy
 
-- No personal postcode is hard-coded into the repository or the interface.
-- The user's selected KML is processed in their own browser; do **not** publish the full BBAC sensitive-area file in this repository.
-- UK postcode lookup uses the third-party API at https://postcodes.io/ and sends the typed postcode to that service.
-- The website uses no dedicated application backend.
+- The postcode field starts blank. There is no personal postcode in the source.
+- The full-country BBAC sensitive-area database is **not** included in this repository and must not be shared publicly without authorisation.
+- The selected KML is filtered locally in the browser rather than uploaded to a server.
+- Entered postcodes are sent to the third-party lookup service [postcodes.io](https://postcodes.io/) to resolve coordinates.
+- If you save a preset, its area settings (possibly including a postcode) are stored **in your own browser only**.
 
-## GitHub Pages
+## Important limitations
 
-Publish **index.html** from the root of the default `main` branch in repository **Settings → Pages**, once the repository visibility and hosting policy have been agreed. This repository is currently private; do not change visibility automatically.
+This is an **experimental planning aid**, not a flight-safety-certified application. Always compare generated output with the original KML and current official restrictions. Feature pairing and approximate selection geometry require further validation against real-world source files, iPad Safari and flight navigation applications.
 
-## Status
+Current input/output supports **KML**, not KMZ. It uses static HTML/CSS/JavaScript and GitHub Pages; no Python runtime or server backend is required.
 
-This is an **experimental test build**, not a flight-safety-certified application. Review the BBAC KML output against original boundaries, pins, descriptions, contact information and restrictions before relying on it. Compatibility with the Hot Air app and iPad Safari still needs to be tested.
+## Feedback
 
-## Technical overview
-
-HTML + CSS + client-side JavaScript. No Python runtime required. Polygon/radius calculations are approximate in the current build, not a surveyed geodesic solution.
+Suggestions, bug reports and experience from pilots using different devices or mapping apps are welcome. Please avoid publicly sharing sensitive BBAC details or personal contact information when reporting issues.
