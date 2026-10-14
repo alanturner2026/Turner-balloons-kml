@@ -5,7 +5,8 @@ const assert = require('node:assert/strict');
  try {
  const page = await browser.newPage(); const errors=[]; page.on('pageerror', e=>errors.push(e.message));
  await page.goto(process.env.PLANNER_TEST_URL || 'http://127.0.0.1:8000');
- assert.equal(await page.title(),'Turner Balloons KML Planner');
+ assert.equal(await page.title(),'Sensitive-area KML for Hot Air | Turner Balloons');
+ assert.equal(await page.locator('h1').textContent(),'Create your own sensitive-area KML for Hot Air');
  await page.locator('.balloon-logo').evaluate(img=>img.decode());
  assert.equal(await page.locator('.balloon-logo').evaluate(img=>img.naturalWidth),216);
  assert.match(await page.locator('.balloon-logo').getAttribute('alt'),/Jester/);
