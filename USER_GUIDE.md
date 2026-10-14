@@ -9,10 +9,10 @@ The planner creates a smaller KML file for an area you choose, starting from **y
 
 ## Before you begin: obtain the latest national KML
 
-1. Sign in to the BBAC/member resource or other **authorised** source where the current national sensitive-area KML is distributed.
+1. Sign in to the **BBAC Members Area → Digital Mapping** section.
 2. Download the **complete UK / all-country sensitive-area KML**, not an already-filtered local extract. Make sure it is the latest published version available to you.
 3. Keep the original file somewhere you can find it — for example, **Files → Downloads** on an iPad, or **Downloads** on a computer.
-4. Check that the filename ends in **.kml**. The current planner does **not** accept a compressed **.kmz** directly. If you have a KMZ file, obtain or extract the underlying KML first.
+4. The file supplied in BBAC Digital Mapping is already a **.kml** file; no conversion is needed.
 5. Do not upload the national database to a public website, forum or GitHub repository. You only select it from your device **inside the planner**.
 
 The BBAC/source publisher controls availability, permissions and updates. This planner does not download the database automatically or determine whether your copy is the latest.
@@ -46,11 +46,11 @@ Download the new, full national KML from the authorised source. Open the planner
 - A saved area, if you choose to save one, may contain its postcode and is stored **on your device in that browser**. Do not save it if you want no locally stored preset.
 - The app preserves the chosen placemark XML and document styling in the generated file, but the filtering and pairing logic is **experimental**. This is not a certified geospatial or flight-safety tool.
 - The current version uses approximate distance calculations. Treat boundaries close to the selection edge with particular care.
-- **KML only** at present; not KMZ, GPX, airspace layers or automatic updates.
+- **KML only** at present; not GPX, airspace layers or automatic updates.
 
 ## If something does not work
 
-- **Nothing happens when choosing a file:** Make sure it is a real `.kml` rather than a `.kmz`, and try opening the website directly in Safari instead of inside an app preview.
+- **Nothing happens when choosing a file:** Make sure it is a real `.kml` file, and try opening the website directly in Safari instead of inside an app preview.
 - **Postcode lookup fails:** Check the postcode, internet connection and try again. The Advanced coordinates fields offer an alternative if you already know the coordinates.
 - **No relevant placemarks:** Check the postcode, radius and whether your original KML actually covers that area.
 - **Download doesn't appear on iPad:** Look in Safari's Downloads list or **Files → Downloads**.
